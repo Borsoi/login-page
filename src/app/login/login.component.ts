@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { UserService } from '../user/user.service';
 import { User } from '../user/user.model';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
@@ -10,8 +9,8 @@ import { AuthService } from '../auth/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
   standalone: true,
-  imports:[FormsModule],
-  providers:[AuthService]
+  imports: [FormsModule],
+  providers: [AuthService]
 })
 export class LoginComponent {
   user: User = {
@@ -21,7 +20,7 @@ export class LoginComponent {
     password: ''
   };
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) { }
 
   onSubmit() {
     alert('Login ocorreu com sucesso');

@@ -1,9 +1,6 @@
-// home.component.ts
-
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
-import { AuthGuard } from '../auth/auth.guard';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +12,7 @@ import { AuthGuard } from '../auth/auth.guard';
 export class HomeComponent {
 
   constructor(private authService: AuthService, private router: Router) {
-    
+
     if (!this.authService.isLoggedIn()) {
       this.router.navigate(['/login']);
     }

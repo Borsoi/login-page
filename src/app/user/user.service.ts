@@ -6,7 +6,6 @@ import { User } from './user.model';
 })
 export class UserService {
 
-  // Simula um usuário estático para fins de exemplo
   private user: User = {
     id: 1,
     username: 'usuario',
@@ -16,7 +15,6 @@ export class UserService {
 
   constructor() { }
 
-  // Retorna o usuário
   getUser(): User {
     return this.user;
   }

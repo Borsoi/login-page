@@ -1,50 +1,44 @@
-/* login.component.css */
-
-/* Estilo para o formulário */
 form {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 300px;
-  text-align: center; /* Alinha o conteúdo do formulário no centro */
+  text-align: center;
 }
-  
-  /* Estilo para os campos de entrada e rótulos */
-  label, input {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  input {
-    width: calc(100%);
-    padding: 8px;
-    font-size: 16px;
-    box-sizing: border-box;
-  }
-  
-  /* Estilo para o botão de login */
-  button {
-    width: calc(50% );
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    box-sizing: border-box;
-    margin-top: 10px
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Estilo para o contêiner do formulário */
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
+
+label,
+input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: calc(100%);
+  padding: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  width: calc(50%);
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-top: 10px
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
