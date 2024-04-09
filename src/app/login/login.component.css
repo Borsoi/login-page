@@ -2,10 +2,13 @@
 
 /* Estilo para o formulário */
 form {
-    width: 300px;
-    margin: 0 auto;
-    text-align: center; /* Alinha o conteúdo do formulário no centro */
-  }
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  text-align: center; /* Alinha o conteúdo do formulário no centro */
+}
   
   /* Estilo para os campos de entrada e rótulos */
   label, input {
@@ -30,6 +33,7 @@ form {
     cursor: pointer;
     font-size: 16px;
     box-sizing: border-box;
+    margin-top: 10px
   }
   
   button:hover {

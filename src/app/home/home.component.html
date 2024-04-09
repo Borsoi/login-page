@@ -1,7 +1,16 @@
 <!-- home.component.html -->
+<header>
+  <h3>Bem-vindo à Página Inicial</h3>
+  <nav>
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/about">Sobre</a></li>
+      <li><a routerLink="/contact">Contato</a></li>
+    </ul>
+  </nav>
+</header>
 
 <div class="container">
-    <h2>Bem-vindo à Página Inicial</h2>
     <p>Você está logado com sucesso!</p>
     <button (click)="logout()">Logout</button>
   </div>
