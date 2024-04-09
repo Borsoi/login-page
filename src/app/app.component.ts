@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports:[HomeComponent, LoginComponent, RouterModule],
+  styleUrls: ['./app.component.css'],
+  standalone: true
 })
 export class AppComponent {
   title = 'my-login-form';
+
+  constructor() {
+    localStorage.setItem('isLoggedIn', 'true');
+  }
 }
