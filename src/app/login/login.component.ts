@@ -3,13 +3,15 @@ import { FormsModule } from '@angular/forms';
 import { UserService } from '../user/user.service';
 import { User } from '../user/user.model';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
   standalone: true,
-  imports:[FormsModule]
+  imports:[FormsModule],
+  providers:[AuthService]
 })
 export class LoginComponent {
   user: User = {
@@ -19,11 +21,12 @@ export class LoginComponent {
     password: ''
   };
 
-  constructor(private router:Router) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   onSubmit() {
-    
-    alert('Login ocorreu com sucesso')
+    alert('Login ocorreu com sucesso');
+    this.authService.login(this.user.username, this.user.password);
+    this.router.navigate(['/home']);
   }
 }
 

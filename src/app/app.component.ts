@@ -14,6 +14,6 @@ export class AppComponent {
   title = 'my-login-form';
 
   constructor() {
-    localStorage.setItem('isLoggedIn', 'true');
+    localStorage.setItem('isLoggedIn', 'false');
   }
 }

@@ -14,6 +14,7 @@ import { AuthService } from '../auth/auth.service';
 export class HomeComponent {
 
   constructor(private authService: AuthService, private router: Router) {
+    
     if (!this.authService.isLoggedIn()) {
       this.router.navigate(['/login']);
     }
