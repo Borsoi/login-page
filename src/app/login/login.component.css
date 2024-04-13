@@ -1,44 +1,60 @@
-form {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.login-container form {
   width: 300px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-label,
-input {
-  display: block;
-  margin-bottom: 10px;
+.login-container form div {
+  margin-bottom: 20px;
 }
 
-input {
-  width: calc(100%);
+.login-container form input {
+  width: calc(100% - 16px);
   padding: 8px;
   font-size: 16px;
   box-sizing: border-box;
 }
 
-button {
-  width: calc(50%);
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-button,
+.register-button {
+  width: 130px;
   padding: 10px;
-  background-color: #007bff;
   color: #fff;
   border: none;
   cursor: pointer;
   font-size: 16px;
   box-sizing: border-box;
-  margin-top: 10px
 }
 
-button:hover {
+.login-button {
+  background-color: #007bff;
+  margin-right: 10px;
+}
+
+.login-button:hover {
   background-color: #0056b3;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.register-button {
+  background-color: #28a745;
+  /* Altera a cor do botão de cadastrar */
+}
+
+.register-button:hover {
+  background-color: #218838;
+  /* Altera a cor de hover do botão de cadastrar */
 }

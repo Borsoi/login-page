@@ -3,13 +3,14 @@ import { FormsModule } from '@angular/forms';
 import { User } from '../user/user.model';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   providers: [AuthService]
 })
 export class LoginComponent {
@@ -27,5 +28,10 @@ export class LoginComponent {
     this.authService.login(this.user.username, this.user.password);
     this.router.navigate(['/home']);
   }
+
+  navigateToNewUser() {
+    this.router.navigate(['/form-new-user']);
+  }
+
 }
 

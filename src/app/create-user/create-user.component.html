@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Cadastrar Novo Usuário</h2>
+    <form (submit)="registerNewUser()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="user.username" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
+        <br>
+        <button type="submit">Salvar Usuário</button>
+    </form>
+</div>
