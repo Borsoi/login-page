@@ -17,8 +17,5 @@ export class AppComponent {
 
   users!: User[];
 
-  constructor() {
-    localStorage.setItem('isLoggedIn', 'true');
-    localStorage.setItem('users', JSON.stringify([]));
-  }
+  constructor() { }
 }

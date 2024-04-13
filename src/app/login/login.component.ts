@@ -15,18 +15,26 @@ import { CommonModule } from '@angular/common';
 })
 export class LoginComponent {
   user: User = {
-    id: 1,
+    id: 0,
     username: '',
     email: '',
     password: ''
   };
 
+  errorMessage: string = '';
+
   constructor(private authService: AuthService, private router: Router) { }
 
   onSubmit() {
-    alert('Login ocorreu com sucesso');
-    this.authService.login(this.user.username, this.user.password);
-    this.router.navigate(['/home']);
+    if (this.authService.validarLoginUsuario(this.user.username, this.user.password)) {
+      alert('Login ocorreu com sucesso');
+      this.authService.login();
+      this.router.navigate(['/home']);
+    }
+    else {
+      this.errorMessage = 'Usuário não cadastrado'
+      alert(this.errorMessage);
+    }
   }
 
   navigateToNewUser() {
