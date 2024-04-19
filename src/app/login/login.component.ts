@@ -18,7 +18,9 @@ export class LoginComponent {
     id: 0,
     username: '',
     email: '',
-    password: ''
+    password: '',
+    cpf: '',
+    dataNascimento: new Date()
   };
 
   errorMessage: string = '';
